@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Art Dédal des Couleurs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" defer></script>
+</head>
+<body>
+    <nav x-data="{ isOpen: false }" class="main-nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="#">Dédal des Couleurs</a>
+                </div>
+
+                <div class="desktop-menu">
+                    <a href="#about" class="nav-link">À propos</a>
+                    <a href="#gallery" class="nav-link">La Galerie</a>
+                    <a href="#contact" class="nav-link">Nous contacter</a>
+                    <a href="#search" class="nav-link">Recherche</a>
+                </div>
+
+                <div class="mobile-menu-button">
+                    <button @click="isOpen = !isOpen" class="menu-toggle">
+                        <svg class="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div x-show="isOpen" class="mobile-menu">
+                <a href="#about" class="mobile-link">À propos</a>
+                <a href="#gallery" class="mobile-link">La Galerie</a>
+                <a href="#contact" class="mobile-link">Nous contacter</a>
+                <a href="#search" class="mobile-link">Recherche</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Galerie d'Art Dédal des Couleurs</h1>
+            <p class="hero-tagline">"Chaque tableau à une histoire. Emportez la vôtre !"</p>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <p>Etant passionné de peinture depuis son plus jeune âge, et travaillant dans le millieu artistique depuis plus de 30 ans, Paul DECHEWSKY vit de sa passion en exposant et vendant ses propres œuvres et celles d'artistes de la mouvance expressionniste telles que des œuvres de Soutine, Modigliani, Kikoine, Pascin, Chagall, Picasso et d'autres encore...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">La Galerie</h2>
+            <div class="gallery-grid">
+                <article class="gallery-card">
+                    <div class="image-container">
+                        <img src="art1.jpg" alt="Paysage d'Annay-sur-Serein" class="gallery-image"/>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="artwork-title">"Paysage d'Annay-sur-Serein, 1951, de Kikoïne"</h3>
+                        <p class="artwork-type">Peinture à l'huile</p>
+                        <p class="artwork-description">
+                            Description : Pendant son séjour dans le Midi, Kikoïne s'imprègne de la lumière et peint des paysages expressionistes comme celui-ci.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <div class="image-container">
+                        <img src="art2.jpg" alt="Le triomphe de la musique" class="gallery-image"/>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="artwork-title">"Le triomphe de la musique, 1964, de Marc Chagall"</h3>
+                        <p class="artwork-type">Peinture murale</p>
+                        <p class="artwork-description">
+                            Citation de l'artiste : "Il faut faire chanter le dessin par la couleur, il faut faire comme Debussy"
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">Rejoignez-nous et recevez les dernières actualités</h2>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="NOM" class="form-input"/>
+                    <input type="text" placeholder="PRÉNOM" class="form-input"/>
+                    <input type="email" placeholder="E-MAIL" class="form-input"/>
+                    <button type="submit" class="submit-button">S'INSCRIRE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Tél : 01.63.45.85.56</p>
+                    <p>Fax : 01.63.45.78.52</p>
+                    <p>Email : dedal@gmail.com</p>
+                    <p class="address">10 RUE DE LA RÉPUBLIQUE, 75000, PARIS</p>
+                </div>
+                <div class="contact-cta">
+                    <h3>Une question ? Prenez rendez-vous et venez à notre rencontre</h3>
+                    <button class="contact-button">Nous contacter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 Galerie d'Art Dédal des Couleurs. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
