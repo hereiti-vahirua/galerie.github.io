@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav x-data="{ isOpen: false }" class="main-nav">
@@ -45,18 +46,56 @@
     <header class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Galerie d'Art Dédal des Couleurs</h1>
-            <p class="hero-tagline">"Chaque tableau à une histoire. Emportez la vôtre !"</p>
+        </div>
+
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">Rejoignez-nous et recevez les dernières actualités</h2>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="NOM" class="form-input"/>
+                    <input type="text" placeholder="PRÉNOM" class="form-input"/>
+                    <input type="email" placeholder="E-MAIL" class="form-input"/>
+                    <button type="submit" class="submit-button">S'INSCRIRE</button>
+                </form>
+            </div>
         </div>
     </header>
+
+    <div class="separator"></div>
 
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-content">
-               <p>Etant passionné de peinture depuis son plus jeune âge, et travaillant dans le millieu artistique depuis plus de 30 ans, Paul DECHEWSKY vit de sa passion en exposant et vendant ses propres œuvres et celles d'artistes de la mouvance expressionniste telles que des œuvres de Soutine, Modigliani, Kikoine, Pascin, Chagall, Picasso et d'autres encore...</p>
-                <img src="/api/placeholder/800/600" alt="Image of an Asian man in a light-colored suit standing in front of a painting"/>
+                <img src="image/artist.png" alt="Portrait de l'artiste devant une de ses oeuvres" class="about-image">
+                <div class="text-content">
+                    <p class="legend">"Chaque tableau a une histoire. Emportez la vôtre !"</p>
+                    <p class="description">
+                        Etant passionné de peinture depuis son plus jeune âge, et travaillant dans le millieu artistique depuis plus de 30 ans, Paul DECHEWSKY vit de sa passion en exposant et vendant ses propres œuvres et celles d'artistes de la mouvance expressionniste telles que des œuvres de Soutine, Modigliani, Kikoine, Pascin, Chagall, Picasso et d'autres encore...
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+<!-- 
+    <section class="gallery-preview">
+        <div class="container">
+            <h2 class="gallery-title">Découvrez notre galerie</h2>
+            <div class="gallery-images">
+                <div class="gallery-item">
+                    <img src="image/interior1.png" alt="Intérieur de la galerie - Espace principal" class="gallery-image">
+                    <p class="image-caption">Espace principal d'exposition</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/interior2.png" alt="Intérieur de la galerie - Collection permanente" class="gallery-image">
+                    <p class="image-caption">Collection permanente</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/interior3.png" alt="Intérieur de la galerie - Espace contemporain" class="gallery-image">
+                    <p class="image-caption">Espace contemporain</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section id="gallery" class="gallery-section">
         <div class="container">
@@ -64,7 +103,7 @@
             <div class="gallery-grid">
                 <article class="gallery-card">
                     <div class="image-container">
-                        <img src="art1.jpg" alt="Paysage d'Annay-sur-Serein" class="gallery-image"/>
+                        <img src="image/art1.jpg" alt="Paysage d'Annay-sur-Serein" class="gallery-image"/>
                     </div>
                     <div class="card-content">
                         <h3 class="artwork-title">"Paysage d'Annay-sur-Serein, 1951, de Kikoïne"</h3>
@@ -77,7 +116,7 @@
 
                 <article class="gallery-card">
                     <div class="image-container">
-                        <img src="art2.jpg" alt="Le triomphe de la musique" class="gallery-image"/>
+                        <img src="image/art2.jpg" alt="Le triomphe de la musique" class="gallery-image"/>
                     </div>
                     <div class="card-content">
                         <h3 class="artwork-title">"Le triomphe de la musique, 1964, de Marc Chagall"</h3>
@@ -87,20 +126,6 @@
                         </p>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="form-container">
-                <h2 class="section-title">Rejoignez-nous et recevez les dernières actualités</h2>
-                <form class="newsletter-form">
-                    <input type="text" placeholder="NOM" class="form-input"/>
-                    <input type="text" placeholder="PRÉNOM" class="form-input"/>
-                    <input type="email" placeholder="E-MAIL" class="form-input"/>
-                    <button type="submit" class="submit-button">S'INSCRIRE</button>
-                </form>
             </div>
         </div>
     </section>
@@ -123,9 +148,24 @@
     </section>
 
     <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://facebook.com/" target="_blank" class="social-link">
+                <img src="image/icon-facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://instagram.com/" target="_blank" class="social-link">
+                <img src="image/icon-insta.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://linkedin.com/" target="_blank" class="social-link">
+                <img src="image/icon-linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="social-link">
+                <img src="image/icon-twitter.png" alt="Twitter" class="social-icon">
+            </a>
+        </div>
         <div class="container">
             <p>© 2024 Galerie d'Art Dédal des Couleurs. Tous droits réservés.</p>
         </div>
     </footer>
+
 </body>
 </html>

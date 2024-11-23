@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Instrument Serif', serif;
     line-height: 1.5;
     color: var(--text-primary);
 }
@@ -103,8 +103,12 @@ body {
 /* Hero Section */
 .hero {
     padding-top: 4rem;
-    background-color: var(--background-light);
+    background-image: url("image/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
     text-align: center;
+    padding-bottom: 4rem;
 }
 
 .hero-content {
@@ -176,11 +180,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Newsletter Section */
-.newsletter-section {
-    padding: 4rem 0;
-}
-
 .form-container {
     max-width: 28rem;
     margin: 0 auto;
@@ -210,7 +209,7 @@ body {
 
 .submit-button {
     padding: 0.75rem;
-    background-color: var(--primary-color);
+    background-color: #8A7458;
     color: white;
     border: none;
     border-radius: 0.375rem;
@@ -247,7 +246,7 @@ body {
 
 .contact-button {
     padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
+    background-color: #8A7458;
     color: white;
     border: none;
     border-radius: 0.375rem;
@@ -259,13 +258,7 @@ body {
     background-color: var(--secondary-color);
 }
 
-/* Footer */
-.main-footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
+
 
 /* Media Queries */
 @media (min-width: 768px) {
@@ -293,6 +286,16 @@ body {
     .section-title {
         font-size: 2rem;
     }
+
+    .gallery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 500px;
+    }
 }
 
 /* Animations */
@@ -310,3 +313,128 @@ body {
 .fade-in {
     animation: fadeIn 0.5s ease-out forwards;
 }
+
+.about-content {
+    display: flex;
+    align-items: start;
+    gap: 80px; /* Espace entre l'image et le texte */
+}
+
+.about-image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.legend {
+    font-size: 2rem;
+}
+
+.separator {
+    width: 100%;
+    height: 50px;
+    background-color: #8A7458;
+    margin-bottom: 50px;
+}
+
+/* Footer */
+
+.main-footer {
+    background-color: #E5E0D8;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espace entre les icônes */
+    margin-bottom: 30px;
+}
+
+.social-link {
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.social-link:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.social-icon {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+}
+
+.about-image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Espace entre la légende et la description */
+}
+
+.legend {
+    font-style: italic;
+    font-size: 32px;
+    color: black;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.gallery-preview {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #8B4513;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    flex: 1;
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Pour que les images gardent leurs proportions */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Léger zoom au survol */
+}
+
+.image-caption {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+}
+
