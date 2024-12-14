@@ -13,3 +13,7 @@ Utilisation du site suivant:
 https://achecks.org/checker/index.php
 
 Mon site est 100% validé pour l'accessibilité
+
+Audit SEO
+---------
+voir le fichier 'Audit SEO.pdf'
